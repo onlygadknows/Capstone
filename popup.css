@@ -26,14 +26,7 @@ body {
     border-radius: 5px;
     position: relative;
 }
-.intro {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+
 
 .paste-container {
     width: 100%;
@@ -47,21 +40,8 @@ h3 {
     color: #333;
     text-align: center;
 }
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-button:hover {
-    background-color: #0056b3;
-}
+
+
 
 .texts {
     margin: 15px 0;
@@ -73,33 +53,73 @@ button:hover {
      transition: .3s;
 }
 
-.btn-container {
+.intro {
     width: 100%;
+    min-height: 80px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.popup-title {
+    width: 80%;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-direction: column;
+}
+
+.popup-title h1 {
+    color: #333;
 }
 
 .btn {
-    right: 0%;
-    top: -50%;
+    padding: 5px;
+    background-color: #0056b3;
+    border-radius: 5px;
+    border: none;
     font-size: 16px;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    color: #fff;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.btn:hover {
+.delete {
+    background-color: red;
+    color: #fff;
+}
+
+.delete:hover {
+    color: red;
+    transition: .3s;
+    background: #fff;
+}
+
+.delete:active {
+    border: 1px solid red;
+}
+
+.btn-container {
+    display: flex;
+
+}
+
+.copy:hover {
     background: #fff;
     color: #0056b3;
     transition: .3s;
 }
 
-.btn:active {
+.copy:active {
     border: 1px solid #0056b3;
 }

@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let p = document.createElement('p');
         p.classList.add('texts');
         
-
         if (storedText) {
             storedText.map((text) => {
                 p.innerText = `${text}`;
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!text) {
             return
         }
-        let element
+        let element;
     }
 
     document.getElementById('btn').addEventListener('click', () => {
