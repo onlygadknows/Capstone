@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+li {
+    background-color: antiquewhite;
+    margin: 5px 0;
+} */
+
+/* p:hover {
+    text-transform: capitalize;
+    padding: 5px;
+    border: dashed;
+    height: auto;
+}
+
+h1:hover {
+    text-transform: capitalize;
+    padding: 5px;
+    border: dashed;
+    height: auto;
+
+}
+
+
+
+h2:hover {
+    text-transform: capitalize;
+    padding: 5px;
+    border: dashed;
+    height: auto;
+
+}
+
+h3:hover {
+    padding: 5px;
+    border: dashed;
+    height: auto;
+
+} */
+
+textarea {
+    resize: none;
+}
+

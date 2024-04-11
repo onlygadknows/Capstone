@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Copy Freely",
+    "description": "Copy specific contents all you can and paste them with just one press.",
+    "author": "gadashellsususco7@gmail.com",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "storage",
+        "input",
+        "contextMenus"
+      ],
+
+    "icons": {
+        "16": "/images/notes1-16.png",
+        "48": "/images/notes1-48.png",
+        "128": "/images/notes1-128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/notes2-16.png",
+            "48": "/images/notes2-48.png",
+            "128": "/images/notes2-128.png"
+        },
+        "default_title": "Copy Freely - Copy all you can"
+    },
+    "options_page": "options.html",
+    "background": {
+        "service_worker": "background.js"
+      },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "css": ["contentScript.css"],
+        "js": ["contentScript.js"]
+
+    }]
+}
