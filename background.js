@@ -40,9 +40,19 @@ let copiedText = [];
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     if (message.action === 'copyText') {
         copiedText.push(message.text);
-        // Send message to popup to update UI with new copied text
-        chrome.runtime.sendMessage({ action: 'updateStoredText', text: copiedText });
     } else if (message.action === 'getStoredText') {
         sendResponse({ text: copiedText });
     }
 });
+
+
+chrome.contextMenus.create({
+    id: 'myContextMenu',
+    title: 'My Context Menu',
+    contexts: ['all']
+})
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+    const selectedText = info.selectionText;
+    console.log(selectedText);
+})

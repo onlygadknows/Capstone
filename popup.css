@@ -47,10 +47,16 @@ h3 {
     margin: 15px 0;
     font-size: 13px;
     display: block;
+    padding: 5px;
 }
 
 .texts:hover {
      transition: .3s;
+     background-color: #616161;
+     color: aliceblue;
+     padding: 5px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     border-radius: 5px;
 }
 
 .intro {

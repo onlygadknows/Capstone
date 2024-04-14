@@ -4,8 +4,7 @@ chrome.runtime.sendMessage({greeting: "Hello World"}, function(response) {
 
 let copiedContent = [];
 
-function copyText() {
-    let selection = window.getSelection().toString();
+function copyText(selection) {
     if (selection) {
         copiedContent.push(selection);
         console.log('Text copied:', selection);
@@ -13,19 +12,13 @@ function copyText() {
     }
 }
 
-
 document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.key === 'c') {
+        event.preventDefault(); // Prevent default copy action
+
         const selectedText = window.getSelection().toString().trim();
         if (selectedText) {
-            chrome.runtime.sendMessage({ action: 'copyText', text: selectedText });
+            copyText(selectedText);
         }
     }
-    if (event.ctrlKey && event.key.toLowerCase() === 'c') {
-        copyText();
-    }
-    // else if (event.ctrlKey && event.key.toLowerCase() === 'v') {
-    //     pasteText();
-    // }
 });
-
